@@ -6,6 +6,7 @@
   --cloud: #f4f4fd;
   --ocean: #404bbf;
   --light-slate: #8e8f99;
+  --green: #31D0AA;
 }
 
 body {
@@ -124,7 +125,7 @@ ol {
 .current::after {
   content: '';
   position: absolute;
-  width: 48px;
+  width: 100%;
   height: 4px;
   left: 0;
   bottom: -1px;
@@ -318,6 +319,8 @@ ol {
   background-color: var(--white, #fff);
   margin: 0 auto;
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
 .team-img {
@@ -325,7 +328,7 @@ ol {
 }
 
 .team-container {
-  padding: 32px 16px;
+  padding: 32px 0;
 }
 
 .team-subtitle {
@@ -344,6 +347,37 @@ ol {
   line-height: 1.5;
   letter-spacing: 0.02em;
   text-align: center;
+  margin-bottom: 8px;
+}
+
+.team-socials-list {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.team-socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.team-socials-link {
+  width: 100%;
+  height: 100%;
+  background-color: var(--iris);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-socials-link:is(:hover, :focus) {
+  background-color: var(--green);
+}
+
+.team-socials-icon {
+  fill: var(--cloud);
 }
 
 /*!------------ CUSTOMERS ------------*/
@@ -424,24 +458,6 @@ ol {
 
 /**------------- PORTFOLIO -------------*/
 /* Класи хедер і футер перевикористав з index.html*/
-/*!------------ HEADER-PORTFOLIO -----------*/
-
-.current-port {
-  color: var(--ocean);
-  position: relative;
-}
-
-.current-port::after {
-  content: '';
-  position: absolute;
-  width: 66px;
-  height: 4px;
-  left: 0;
-  bottom: -1px;
-  background-color: #404bbf;
-  border-radius: 2px;
-}
-
 /*!------------ MAIN-HERO -----------*/
 
 .portfolio {
